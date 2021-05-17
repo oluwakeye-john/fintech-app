@@ -7,11 +7,16 @@ class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
+    double horPadding = size.width * 0.06;
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        height: size.height,
-        child: child,
+      body: SafeArea(
+        child: Container(
+          padding: EdgeInsets.only(left: horPadding, right: horPadding),
+          width: double.infinity,
+          height: size.height,
+          child: child,
+        ),
       ),
     );
   }
