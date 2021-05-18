@@ -8,6 +8,7 @@ class BalanceList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView(
+        primary: false,
         shrinkWrap: true,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,

@@ -118,7 +118,7 @@ class HomeBarChartSummary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 20, bottom: 10),
+      padding: EdgeInsets.only(top: 25, bottom: 10),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -126,12 +126,15 @@ class HomeBarChartSummary extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("This week"),
+              Text(
+                "This week",
+                style: TextStyle(fontSize: 14),
+              ),
               Padding(
                 padding: EdgeInsets.only(top: 8.0),
                 child: Text(
                   "+2.5%",
-                  style: TextStyle(color: Color(0xFF219653)),
+                  style: TextStyle(color: Color(0xFF219653), fontSize: 12),
                 ),
               )
             ],
