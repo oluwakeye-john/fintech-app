@@ -12,3 +12,7 @@ Color inputBg = Color(0xFFFAFAFA);
 Color inputText = Color(0xFFBABABA);
 
 Color header1Color = Color(0xFF06244B);
+
+Color errorLight = Color(0xFFFDE8EA);
+
+Color errorColor = Color(0xFFED2F46);

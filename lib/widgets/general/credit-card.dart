@@ -11,7 +11,7 @@ class CreditCard extends StatelessWidget {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(12),
           child: Container(
-              width: size.width * 0.6,
+              width: size.width * 0.57,
               color: primaryColor,
               child: Stack(
                 children: [
