@@ -1,3 +1,4 @@
+import 'package:fintech/pages/cards.dart';
 import 'package:fintech/pages/home.dart';
 import 'package:fintech/pages/plans.dart';
 import 'package:fintech/widgets/general/bottom-nav.dart';
@@ -20,7 +21,7 @@ class _TabLayoutState extends State<TabLayout> {
   List<Widget> tabWidgets = [
     HomeScreen(),
     PlansScreen(),
-    HomeScreen(),
+    CardsScreen(),
     PlansScreen(),
   ];
 

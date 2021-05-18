@@ -1,7 +1,12 @@
 import 'package:fintech/constants.dart';
 import 'package:flutter/material.dart';
 
-class PlansHeading extends StatelessWidget {
+class PageHeader extends StatelessWidget {
+  final String title;
+  final String subTitle;
+
+  PageHeader({@required this.title, @required this.subTitle});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -12,7 +17,7 @@ class PlansHeading extends StatelessWidget {
           Container(
             padding: EdgeInsets.only(bottom: 20),
             child: Text(
-              "Saving plans",
+              title,
               style: TextStyle(
                   color: header1Color,
                   fontWeight: FontWeight.bold,
@@ -22,7 +27,7 @@ class PlansHeading extends StatelessWidget {
           FractionallySizedBox(
             widthFactor: 0.75,
             child: Text(
-              "Create new plan and save towards that big goal.",
+              subTitle,
               style: TextStyle(color: Color(0xFF666666)),
             ),
           ),

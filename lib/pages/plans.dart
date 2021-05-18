@@ -1,5 +1,5 @@
+import 'package:fintech/widgets/general/page-header.dart';
 import 'package:fintech/widgets/plan/card.dart';
-import 'package:fintech/widgets/plan/heading.dart';
 import 'package:flutter/material.dart';
 
 class PlansScreen extends StatelessWidget {
@@ -10,7 +10,10 @@ class PlansScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            PlansHeading(),
+            PageHeader(
+              title: "Saving plans",
+              subTitle: "Create new plan and save towards that big goal.",
+            ),
             GridView(
               shrinkWrap: true,
               primary: false,
