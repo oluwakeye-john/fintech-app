@@ -20,93 +20,101 @@ class HomeBarChart extends StatelessWidget {
                 barTouchData: BarTouchData(
                   enabled: false,
                 ),
-                titlesData: FlTitlesData(
-                  show: true,
-                  bottomTitles: SideTitles(
-                    showTitles: true,
-                    getTextStyles: (value) =>
-                        const TextStyle(color: Color(0xFF999999), fontSize: 13),
-                    margin: 16,
-                    getTitles: (double value) {
-                      switch (value.toInt()) {
-                        case 0:
-                          return 'Mon';
-                        case 1:
-                          return 'Tue';
-                        case 2:
-                          return 'Wed';
-                        case 3:
-                          return 'Thu';
-                        case 4:
-                          return 'Fri';
-                        case 5:
-                          return 'Sat';
-                        case 6:
-                          return 'Sun';
-                        default:
-                          return '';
-                      }
-                    },
-                  ),
-                  leftTitles: SideTitles(
-                    showTitles: false,
-                  ),
-                ),
-                barGroups: [
-                  BarChartGroupData(x: 2, barRods: [
-                    BarChartRodData(
-                        colors: [primaryLight],
-                        width: 42,
-                        y: 6,
-                        borderRadius: BorderRadius.circular(6))
-                  ]),
-                  BarChartGroupData(x: 2, barRods: [
-                    BarChartRodData(
-                        colors: [primaryLight],
-                        width: 42,
-                        y: 12,
-                        borderRadius: BorderRadius.circular(6))
-                  ]),
-                  BarChartGroupData(x: 2, barRods: [
-                    BarChartRodData(
-                        colors: [primaryLight],
-                        width: 42,
-                        y: 8,
-                        borderRadius: BorderRadius.circular(6))
-                  ]),
-                  BarChartGroupData(x: 2, barRods: [
-                    BarChartRodData(
-                        colors: [primaryLight],
-                        width: 42,
-                        y: 12,
-                        borderRadius: BorderRadius.circular(6))
-                  ]),
-                  BarChartGroupData(x: 2, barRods: [
-                    BarChartRodData(
-                        colors: [primaryColor],
-                        width: 42,
-                        y: 15,
-                        borderRadius: BorderRadius.circular(6))
-                  ]),
-                  BarChartGroupData(x: 2, barRods: [
-                    BarChartRodData(
-                        colors: [primaryLight],
-                        width: 42,
-                        y: 12,
-                        borderRadius: BorderRadius.circular(6))
-                  ]),
-                  BarChartGroupData(x: 2, barRods: [
-                    BarChartRodData(
-                        colors: [primaryLight],
-                        width: 42,
-                        y: 7,
-                        borderRadius: BorderRadius.circular(6))
-                  ]),
-                ])),
+                titlesData: buildFlTitlesData(),
+                barGroups: barGroups())),
           ),
         ],
       ),
     );
+  }
+
+  FlTitlesData buildFlTitlesData() {
+    return FlTitlesData(
+      show: true,
+      bottomTitles: SideTitles(
+        showTitles: true,
+        getTextStyles: (value) =>
+            const TextStyle(color: Color(0xFF999999), fontSize: 13),
+        margin: 16,
+        getTitles: (double value) {
+          switch (value.toInt()) {
+            case 0:
+              return 'Mon';
+            case 1:
+              return 'Tue';
+            case 2:
+              return 'Wed';
+            case 3:
+              return 'Thu';
+            case 4:
+              return 'Fri';
+            case 5:
+              return 'Sat';
+            case 6:
+              return 'Sun';
+            default:
+              return '';
+          }
+        },
+      ),
+      leftTitles: SideTitles(
+        showTitles: false,
+      ),
+    );
+  }
+
+  List<BarChartGroupData> barGroups() {
+    return [
+      BarChartGroupData(x: 0, barRods: [
+        BarChartRodData(
+            colors: [primaryLight],
+            width: 42,
+            y: 6,
+            borderRadius: BorderRadius.circular(6))
+      ]),
+      BarChartGroupData(x: 1, barRods: [
+        BarChartRodData(
+            colors: [primaryLight],
+            width: 42,
+            y: 12,
+            borderRadius: BorderRadius.circular(6))
+      ]),
+      BarChartGroupData(x: 2, barRods: [
+        BarChartRodData(
+            colors: [primaryLight],
+            width: 42,
+            y: 8,
+            borderRadius: BorderRadius.circular(6))
+      ]),
+      BarChartGroupData(x: 3, barRods: [
+        BarChartRodData(
+            colors: [primaryLight],
+            width: 42,
+            y: 12,
+            borderRadius: BorderRadius.circular(6))
+      ]),
+      BarChartGroupData(x: 4, barRods: [
+        BarChartRodData(
+            colors: [primaryColor],
+            width: 42,
+            y: 15,
+            borderRadius: BorderRadius.circular(6))
+      ]),
+      BarChartGroupData(x: 5, barRods: [
+        BarChartRodData(
+            colors: [primaryLight],
+            width: 42,
+            y: 12,
+            borderRadius: BorderRadius.circular(6))
+      ]),
+      BarChartGroupData(x: 6, barRods: [
+        BarChartRodData(
+            colors: [primaryLight],
+            width: 42,
+            y: 7,
+            borderRadius: BorderRadius.circular(6))
+      ]),
+    ];
   }
 }
 

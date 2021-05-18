@@ -1,4 +1,4 @@
-import 'package:fintech/pages/home.dart';
+import 'package:fintech/widgets/general/app-layout.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,9 +10,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: HomeScreen(),
-      debugShowCheckedModeBanner: false,
-    );
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        initialRoute: '/',
+        routes: {
+          "/": (context) => TabLayout(),
+        });
   }
 }
