@@ -201,7 +201,7 @@ class HomeBarChartHeading extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "Expendixture breakdown",
+          "Expenditure breakdown",
           style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
         ),
         Text(

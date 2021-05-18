@@ -20,6 +20,8 @@ class _TabLayoutState extends State<TabLayout> {
   List<Widget> tabWidgets = [
     HomeScreen(),
     PlansScreen(),
+    HomeScreen(),
+    PlansScreen(),
   ];
 
   @override
