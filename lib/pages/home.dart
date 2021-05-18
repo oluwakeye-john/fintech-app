@@ -1,6 +1,7 @@
 import 'package:fintech/widgets/home/ads.dart';
 import 'package:fintech/widgets/home/balance-card.dart';
 import 'package:fintech/widgets/home/balance-list.dart';
+import 'package:fintech/widgets/home/bar-chart.dart';
 import 'package:fintech/widgets/home/body.dart';
 import 'package:fintech/widgets/home/header.dart';
 import 'package:flutter/material.dart';
@@ -13,13 +14,22 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           HomeHeader(),
-          BalanceList(children: [
-            HomeBalanceCard(),
-            HomeBalanceCard(
-              alt: true,
-            )
-          ]),
-          HomeAds(),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  BalanceList(children: [
+                    HomeBalanceCard(),
+                    HomeBalanceCard(
+                      alt: true,
+                    )
+                  ]),
+                  HomeBarChart(),
+                  HomeAds(),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );

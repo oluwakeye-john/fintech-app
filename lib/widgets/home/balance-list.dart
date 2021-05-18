@@ -11,7 +11,7 @@ class BalanceList extends StatelessWidget {
         shrinkWrap: true,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          childAspectRatio: 0.8,
+          childAspectRatio: 0.76,
           mainAxisSpacing: 24,
           crossAxisSpacing: 24,
         ),
