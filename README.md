@@ -1,7 +1,5 @@
 # Fintech App
 
-![hello](docs/presentation.png)
-
 [Link to figma file](https://www.figma.com/community/file/972585835574785183/Fintech-App-Design)
 
 ![screenshot1](docs/screenshot1.png)
