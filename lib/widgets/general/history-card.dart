@@ -35,7 +35,7 @@ class HistoryCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(bottom: 5),
+                      padding: EdgeInsets.only(bottom: 8),
                       child: Text("Withdrawal",
                           style: TextStyle(
                               color: Color(0xFF292D38),

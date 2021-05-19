@@ -10,7 +10,7 @@ class TransactionScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            margin: EdgeInsets.only(top: 20, bottom: 20),
+            margin: EdgeInsets.only(top: 30, bottom: 20),
             child: Row(
               children: [
                 Icon(
@@ -21,7 +21,7 @@ class TransactionScreen extends StatelessWidget {
                   child: Center(
                       child: Text(
                     "Card Transactions",
-                    style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   )),
                 )
               ],
