@@ -11,7 +11,7 @@ class HomeAds extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 110,
-      margin: EdgeInsets.only(top: 30),
+      margin: EdgeInsets.only(top: 30, bottom: 30),
       child: SvgPicture.asset(
         'assets/images/save-ads.svg',
         width: double.infinity,

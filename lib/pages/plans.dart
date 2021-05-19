@@ -1,5 +1,5 @@
 import 'package:fintech/widgets/general/page-header.dart';
-import 'package:fintech/widgets/plan/card.dart';
+import 'package:fintech/widgets/plan/plan-list.dart';
 import 'package:flutter/material.dart';
 
 class PlansScreen extends StatelessWidget {
@@ -14,32 +14,7 @@ class PlansScreen extends StatelessWidget {
               title: "Saving plans",
               subTitle: "Create new plan and save towards that big goal.",
             ),
-            GridView(
-              shrinkWrap: true,
-              primary: false,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio: 1,
-                  mainAxisSpacing: 25,
-                  crossAxisSpacing: 25),
-              children: [
-                PlanCard(),
-                PlanCard(),
-                PlanCard(),
-                PlanCard(),
-                PlanCard(),
-                PlanCard(),
-                PlanCard(),
-                PlanCard(),
-                PlanCard(),
-                PlanCard(),
-                PlanCard(),
-                PlanCard(),
-                PlanCard(),
-                PlanCard(),
-                PlanCard(),
-              ],
-            )
+            PlanList()
           ],
         ),
       ),

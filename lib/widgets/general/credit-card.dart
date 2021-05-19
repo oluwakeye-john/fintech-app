@@ -3,16 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CreditCard extends StatelessWidget {
+  final bool alt;
+  CreditCard({this.alt = false});
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-        margin: EdgeInsets.only(right: 20),
+        margin: EdgeInsets.only(
+          right: 20,
+        ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(12),
           child: Container(
               width: size.width * 0.57,
-              color: primaryColor,
+              color: !alt ? primaryColor : brownColor,
               child: Stack(
                 children: [
                   Positioned(
@@ -20,6 +25,7 @@ class CreditCard extends StatelessWidget {
                       top: 0,
                       child: SvgPicture.asset(
                         'assets/images/rings.svg',
+                        color: !alt ? null : Color(0xFFCFAD9B),
                         width: size.width * 0.33,
                       )),
                   Container(
@@ -28,7 +34,11 @@ class CreditCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SvgPicture.asset('assets/images/wallet.svg'),
+                        SvgPicture.asset(
+                          !alt
+                              ? 'assets/images/wallet.svg'
+                              : 'assets/images/wallet-brown.svg',
+                        ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -37,13 +47,17 @@ class CreditCard extends StatelessWidget {
                               child: Text(
                                 "MAIN CARD",
                                 style: TextStyle(
-                                    color: Color(0xFFB3C0D0), fontSize: 12.4),
+                                    color: !alt
+                                        ? Color(0xFFB3C0D0)
+                                        : Color(0xFFCFAD9B),
+                                    fontSize: 12.4),
                               ),
                             ),
                             Text(
                               "**5677",
                               style: TextStyle(
-                                  color: Colors.white,
+                                  color:
+                                      !alt ? Colors.white : Color(0xFF8F4724),
                                   fontSize: 32,
                                   fontWeight: FontWeight.bold),
                             ),

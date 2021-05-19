@@ -14,14 +14,17 @@ class HomeBarChart extends StatelessWidget {
           Container(
             height: 225,
             width: double.infinity,
-            child: BarChart(BarChartData(
-                maxY: 17,
-                borderData: FlBorderData(show: false),
-                barTouchData: BarTouchData(
-                  enabled: false,
-                ),
-                titlesData: buildFlTitlesData(),
-                barGroups: barGroups())),
+            child: BarChart(
+              BarChartData(
+                  maxY: 17,
+                  borderData: FlBorderData(show: false),
+                  barTouchData:
+                      BarTouchData(enabled: true, handleBuiltInTouches: true),
+                  titlesData: buildFlTitlesData(),
+                  barGroups: barGroups()),
+              swapAnimationDuration: Duration(milliseconds: 150),
+              swapAnimationCurve: Curves.linear,
+            ),
           ),
         ],
       ),

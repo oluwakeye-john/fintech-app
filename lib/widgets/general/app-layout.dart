@@ -1,8 +1,11 @@
+import 'package:fintech/constants.dart';
 import 'package:fintech/pages/cards.dart';
 import 'package:fintech/pages/home.dart';
 import 'package:fintech/pages/plans.dart';
+import 'package:fintech/pages/transaction.dart';
 import 'package:fintech/widgets/general/bottom-nav.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class TabLayout extends StatefulWidget {
   @override
@@ -22,7 +25,7 @@ class _TabLayoutState extends State<TabLayout> {
     HomeScreen(),
     PlansScreen(),
     CardsScreen(),
-    PlansScreen(),
+    TransactionScreen(),
   ];
 
   @override
@@ -30,6 +33,10 @@ class _TabLayoutState extends State<TabLayout> {
     Size size = MediaQuery.of(context).size;
 
     double horPadding = size.width * 0.06;
+
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: primaryColor));
+
     return Scaffold(
         backgroundColor: Colors.white,
         bottomNavigationBar: BottomNav(
