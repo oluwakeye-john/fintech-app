@@ -5,18 +5,16 @@ import 'package:flutter/material.dart';
 class PlansScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            PageHeader(
-              title: "Saving plans",
-              subTitle: "Create new plan and save towards that big goal.",
-            ),
-            PlanList()
-          ],
-        ),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          PageHeader(
+            title: "Saving plans",
+            subTitle: "Create new plan and save towards that big goal.",
+          ),
+          PlanList()
+        ],
       ),
     );
   }
